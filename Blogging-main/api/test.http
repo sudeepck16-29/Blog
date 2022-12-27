@@ -1,0 +1,233 @@
+
+#-------------------------------------------------------------------
+#--------------------------Uploading Image-----------------------
+#-------------------------------------------------------------------
+
+# POST  http://localhost:8000/api/upload
+# Content-Type: multipart/form-data
+
+# key = file     value = selectfile
+
+
+
+
+
+
+
+
+
+
+
+
+
+#-------------------------------------------------------------------
+#---------------------------Categories CRUD-------------------------
+#-------------------------------------------------------------------
+
+
+#--------------------------Creating Categories---------------------
+
+# POST  http://localhost:8000/api/categories
+# Content-Type: application/json
+
+# {
+#     "name":"movies"
+# } 
+
+
+#--------------------------Fetching Categories---------------------
+
+# GET  http://localhost:8000/api/categories
+# Content-Type: application/json
+
+# {
+#     "name":"music"
+# } 
+
+
+
+
+#---------------------------------------------------------------------
+#-----------------------Fetch Posts By Conditions---------------------
+#---------------------------------------------------------------------
+
+
+#-----------------------------Fetch All Posts----------------------------
+
+# GET  http://localhost:8000/api/post/
+# Content-Type: application/json
+
+# {
+#     "username":"manoj060301",
+#     "title":"lorem",
+#     "desc":"I am Manoj Kumar M"
+
+# } 
+
+
+#---------------------------Fetch All Posts by user-----------------------
+
+# GET  http://localhost:8000/api/post?user=sudeep060301
+# Content-Type: application/json
+
+# {
+#     "username":"manoj060301",
+#     "title":"lorem",
+#     "desc":"I am Manoj Kumar M"
+
+# } 
+
+
+#---------------------------Fetch All Posts by category-----------------------
+
+# GET  http://localhost:8000/api/post?category=movies
+# Content-Type: application/json
+
+# {
+#     "username":"manoj060301",
+#     "title":"lorem",
+#     "desc":"I am Manoj Kumar M"
+
+# } 
+
+
+#-------------------------------------------------------------------
+#----------------------------POST CRUD------------------------------
+#-------------------------------------------------------------------
+
+
+
+#-----------------------------Fetch Post----------------------------
+
+# GET  http://localhost:8000/api/post/6296e59720a28a6ec828af30
+# Content-Type: application/json
+
+# {
+#     "username":"manoj060301",
+#     "title":"lorem",
+#     "desc":"I am Manoj Kumar M"
+
+# } 
+
+
+
+#-----------------------------Delete Post----------------------------
+
+# DELETE  http://localhost:8000/api/post/6296d9700a6054f1b9b14e3f
+# Content-Type: application/json
+
+# {
+#     "username":"manoj060301",
+#     "title":"lorem",
+#     "desc":"I am Manoj Kumar M"
+
+# } 
+
+
+
+
+#-----------------------------Update Post----------------------------
+
+# PUT http://localhost:8000/api/post/6296d9700a6054f1b9b14e3f
+# Content-Type: application/json
+
+# {
+#     "username":"manoj060301",
+#     "title":"lorem",
+#     "desc":"I am Manoj Kumar M"
+
+# } 
+
+
+#-----------------------------Create Post----------------------------
+
+# POST http://localhost:8000/api/post/
+# Content-Type: application/json
+
+# {
+#     "username":"sudeep060301",
+#     "title":"KGF",
+#     "desc":"lorem epsum",
+#     "categories" : "movies"
+
+# } 
+
+
+
+
+#-------------------------------------------------------------------
+#------------------------------User Crud----------------------------
+#-------------------------------------------------------------------
+
+
+#-----------------------------Fetch User---------------------------------
+
+# GET http://localhost:8000/api/user/629668a69893c047cce24b79
+# Content-Type: application/json
+
+# {
+#     "userId" : "629668a69893c047cce24b79",
+#     "username":"manoj060301",
+#     "password":"manoj@123"
+
+# } 
+
+
+#------------------------------delete user--------------------------------
+
+
+# DELETE http://localhost:8000/api/user/62963fe0ea9e4b1e0f4c8e90
+# Content-Type: application/json
+
+# {
+#     "userId" : "62963fe0ea9e4b1e0f4c8e90",
+#     "username":"manojkumarm060301",
+#     "password":"manoj@123"
+
+# } 
+
+#-----------------------------Update User-------------------------------
+
+# PUT http://localhost:8000/api/user/62963fe0ea9e4b1e0f4c8e90
+# Content-Type: application/json
+
+# {
+#     "userId" : "62963fe0ea9e4b1e0f4c8e90",
+#     "username":"manoj060301",
+#     "password":"manoj@123"
+
+# } 
+
+
+
+#-----------------------------------------------------------------------
+#-----------------------------Authentication----------------------------
+#-----------------------------------------------------------------------
+
+
+
+#------------------------------Login------------------------------------
+
+# POST http://localhost:8000/api/auth/login
+# Content-Type: application/json
+
+# {
+#     "username":"manoj060301",
+#     "password":"manoj@123"
+
+# } 
+
+
+
+#------------------------------Register---------------------------------
+
+
+POST http://localhost:8000/api/auth/register
+Content-Type: application/json
+
+{
+    "username":"manoj",
+    "email":"manoj@gmail.com",
+    "password":"manoj@123"
+
+} 
